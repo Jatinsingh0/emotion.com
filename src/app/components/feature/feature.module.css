@@ -49,7 +49,8 @@
   font-size: 95.7px;
   color: #E2EFBA;
 }
-.infoText{
+
+.infoText {
   color: #E2EFBA;
   padding-bottom: 20px;
   line-height: 18px;
@@ -82,19 +83,21 @@
   }
 }
 
-
-@media screen and (max-width: 1280px){
+/* Media query for screen width 1280px */
+@media screen and (max-width: 1280px) {
   .title {
     font-size: 80.7px;
   }
   .subtitle {
     font-size: 80.7px;
   }
-  .scroll{
+  .scroll {
     font-size: 10px;
   }
 }
-@media screen and (max-width: 1024px){ 
+
+/* Media query for screen width 1024px */
+@media screen and (max-width: 1024px) {
   .title {
     font-size: 76px;
   }
@@ -102,68 +105,109 @@
     font-size: 76px;
   }
 }
-@media screen and (max-width: 768px){
+
+/* Media query for screen width 768px */
+@media screen and (max-width: 768px) {
   .title {
     font-size: 65px;
   }
   .subtitle {
     font-size: 65px;
   }
-  .infoText{
+  .infoText {
     font-size: 14px;
   }
-  .subtitleSection{
+  .subtitleSection {
     margin-top: 80px;
   }
 }
 
-
+/* Media query for screen width 640px */
 @media screen and (max-width: 640px) {
   .wrapper {
-    padding: 0 20px; /* Add horizontal padding */
+    padding: 0 20px;
   }
 
   .titleSection {
-    flex-direction: column; /* Stack title items vertically */
-    align-items: center; /* Center items */
-    margin-bottom: 30px; /* Adjust margin as needed */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .title {
-    font-size: 95.7px; /* Keep original font size */
-    margin: 0; /* Remove margin for better stacking */
+    margin: 0;
   }
 
   .scroll {
-    font-size: 12px; /* Keep original size */
-    margin-top: 10px; /* Add spacing above scroll text */
+    margin-top: 10px;
   }
 
   .buttonSection {
-    justify-content: center;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 
   .subtitleSection {
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
-    margin-top: 40px; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
   }
 
   .subtitle {
-    font-size: 95.7px; 
-    margin: 0; 
+    font-size: 90.7px;
+    margin: 0;
+    padding: 0 20px;
   }
 
   .infoText {
-    text-align: center; 
-    padding-bottom: 20px; 
+    text-align: center;
   }
 
   .ctaButton {
-    padding: 12px 20px; 
-    font-size: 14px; 
+    padding: 12px 20px;
+  }
+}
+
+/* Media query for screen width 400px */
+@media screen and (max-width: 400px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .titleSection {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .scroll {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  .buttonSection {
+    margin-top: 15px;
+  }
+
+  .subtitleSection {
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    font-size: 65px;
+    padding: 0 15px;
+  }
+
+  .infoText {
+    font-size: 10px;
+    padding-bottom: 15px;
+  }
+
+  .ctaButton {
+    padding: 10px 18px;
+    font-size: 12px;
   }
 }
