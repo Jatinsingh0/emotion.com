@@ -1,8 +1,7 @@
 "use client"
-
 import { useState } from "react";
 import styles from "./navbar.module.css"
-// import Link from "next/link";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
