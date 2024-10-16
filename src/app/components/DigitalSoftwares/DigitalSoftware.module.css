@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heading {
+    font-size: 34px; /* 3xl equivalent */
+    font-weight: bold;
+    color: #8a78ea; /* Your desired heading color */
+    margin: 20px 0px 15px; /* Space below heading */
+    padding: 0px 0px 20px;
+    text-align: center;
+    word-spacing: 2px;
+  }
+  
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between cards */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Optional: Limit maximum width */
+  }
+  
+  .card {
+    border-radius: 0.5rem; /* Rounded corners */
+    overflow: hidden;
+    background-color: white; /* Background color for cards */
+  }
+  
+  
+  .icon {
+    max-width: 100%; /* Responsive icon */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .cardContent {
+    padding: 1rem; /* Padding for card content */
+  }
+  
+  .cardTitle {
+    font-size: 18px; /* Title size */
+    font-weight: 600; /* Semi-bold */
+    color: #8a78ea; /* Title color */
+    margin: 20px 0px 10px; 
+    padding: 0px 10px;
+    line-height: 20px;
+  }
+  
+  .cardDescription {
+    color: black; 
+    font-size: 14px;
+    line-height: 20px;
+  }
+  

@@ -6,34 +6,23 @@ const Feature = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.titleSection}>
-        <div>
-          <p className={styles.title}>Cutting</p>
-          <p className={`${styles.title} ${styles.stylizedText}`}>edge.</p>
-        </div>
-        <div>
-          <p className={styles.scroll}>
-            <span className={styles.bracket}>[</span>
-            <span className={styles.movingText}>ESCROLL, GSAP, NEXT, THREE.JS, STORYBLOK, STORYTELLING</span>
-            <span className={styles.bracket}>]</span>
-          </p>
-        </div>
+        <p className={styles.title}>Worried About Crazy</p>
+        <p className={styles.title}>Digital Signage</p>
+        <p className={styles.title}>Software Fees?</p>
       </div>
 
-      <div className="buttonSection">
-        <p><Link href="#" className={styles.ctaButton}>Ready To Talk →</Link></p>
+      <div className={styles.desc}>
+        <p>Trust us!</p>
+        <p>Many were right in your shoes, Just a few months ago.</p>
+        <p>
+          Timidlly - The digital signage software can patch your draining
+          pockets now!
+        </p>
       </div>
 
-      <div className={styles.subtitleSection}>
-        <div className={styles.infoText}>
-          <p>We specialize in crafting interfaces that deliver an</p>
-          <p>unparalleled user experience. Prototyping, designing,</p>
-          <p>and developing for Web2 & Web3 interfaces.</p>
-        </div>
-        <div>
-          <p className={styles.subtitle}>Frontend</p>
-          <p className={styles.subtitle}>solutions.</p>
-        </div>
-      </div>
+      <Link href="#" className={styles.ctaButton}>
+        Login & Try Now →
+      </Link>
     </div>
   );
 };

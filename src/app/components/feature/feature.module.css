@@ -1,109 +1,39 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 30px;
+  grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 730px;
+    display: flex;
 }
 
-.titleSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  width: 100%;  
+.titleSection {  
   margin-bottom: 50px;
+  line-height: 1.1;
+ 
 }
 
 .title {
-  font-size: 95.7px;
+  font-size: 72px;
+  font-weight: bold;
   color: #E2EFBA;
 }
 
-.buttonSection {
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  width: 100%;              
+.desc{
+  font-size: 19px;
+  margin-bottom: 20px;
 }
 
 .ctaButton {
   background-color: #7e36f7;
-  padding: 8.1px 16px;
-  border-radius: 20px;
+  padding: 15px 35px;
+  border-radius: 50px;
   color: #E2EFBA;
-  font-weight: bold;
   font-size: 14px;
   border: none;
   cursor: pointer;
-}
-
-.subtitleSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  width: 100%;  
-  margin-top: 50px;
-}
-
-.subtitle {
-  font-size: 95.7px;
-  color: #E2EFBA;
-}
-
-.infoText {
-  color: #E2EFBA;
-  padding-bottom: 20px;
-  line-height: 18px;
-}
-
-.scroll {
-  font-size: 12px;
-  padding-top: 20px;
-  display: flex; 
-  align-items: center; 
-  overflow: hidden;
-}
-
-.bracket {
-  color: #E2EFBA; 
-}
-
-.movingText {
-  white-space: nowrap; /* Prevent line breaks */
-  display: inline-block; 
-  animation: scroll-left 10s linear infinite; /* Animation settings */
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%); /* Start from the right */
-  }
-  100% {
-    transform: translateX(-100%); /* Move to the left */
-  }
-}
-
-/* Media query for screen width 1280px */
-@media screen and (max-width: 1280px) {
-  .title {
-    font-size: 80.7px;
-  }
-  .subtitle {
-    font-size: 80.7px;
-  }
-  .scroll {
-    font-size: 10px;
-  }
-}
-
-/* Media query for screen width 1024px */
-@media screen and (max-width: 1024px) {
-  .title {
-    font-size: 76px;
-  }
-  .subtitle {
-    font-size: 76px;
-  }
 }
 
 /* Media query for screen width 768px */
@@ -111,103 +41,13 @@
   .title {
     font-size: 65px;
   }
-  .subtitle {
-    font-size: 65px;
-  }
-  .infoText {
-    font-size: 14px;
-  }
-  .subtitleSection {
-    margin-top: 80px;
-  }
 }
 
 /* Media query for screen width 640px */
 @media screen and (max-width: 640px) {
-  .wrapper {
-    padding: 0 20px;
-  }
-
-  .titleSection {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .title {
-    margin: 0;
-  }
-
-  .scroll {
-    margin-top: 10px;
-  }
-
-  .buttonSection {
-    margin-top: 20px;
-  }
-
-  .subtitleSection {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 40px;
-  }
-
-  .subtitle {
-    font-size: 90.7px;
-    margin: 0;
-    padding: 0 20px;
-  }
-
-  .infoText {
-    text-align: center;
-  }
-
-  .ctaButton {
-    padding: 12px 20px;
+  .desc{
+    font-size: 15px;
+    
   }
 }
 
-/* Media query for screen width 400px */
-@media screen and (max-width: 400px) {
-  .wrapper {
-    padding: 0 15px;
-  }
-
-  .titleSection {
-    margin-bottom: 20px;
-  }
-
-  .title {
-    font-size: 60px;
-  }
-
-  .scroll {
-    font-size: 10px;
-    margin-top: 8px;
-  }
-
-  .buttonSection {
-    margin-top: 15px;
-  }
-
-  .subtitleSection {
-    margin-top: 30px;
-  }
-
-  .subtitle {
-    font-size: 65px;
-    padding: 0 15px;
-  }
-
-  .infoText {
-    font-size: 10px;
-    padding-bottom: 15px;
-  }
-
-  .ctaButton {
-    padding: 10px 18px;
-    font-size: 12px;
-  }
-}

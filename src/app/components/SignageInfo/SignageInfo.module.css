@@ -1,0 +1,82 @@
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 40px; */
+    /* background-color: #f5f7fa; */
+  }
+  
+  .left {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+  }
+  
+  .heading {
+    font-size: 34px;
+    font-weight: bold;
+    color: #8a78ea;
+    margin: 20px 0px 25px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #FFFF;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .signagerImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .card {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .iconWrapper {
+    background-color: #fff;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+  }
+  
+  .cardHeading {
+    font-size: 18px;
+    color: #8a78ea;
+    margin-bottom: 8px;
+  }
+  
+  .cardText {
+    font-size: 14px;
+    color: #FFFF;
+    font-weight: 500;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
