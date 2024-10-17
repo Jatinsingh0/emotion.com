@@ -20,13 +20,13 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
     gap: 2rem; /* Space between cards */
     width: 100%; /* Full width */
-    max-width: 1200px; /* Optional: Limit maximum width */
+    max-width: 1200px; 
   }
   
   .card {
     border-radius: 0.5rem; /* Rounded corners */
     overflow: hidden;
-    background-color: white; /* Background color for cards */
+    background-color: white; 
   }
   
   
