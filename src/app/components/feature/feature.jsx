@@ -6,9 +6,7 @@ const Feature = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.titleSection}>
-        <p className={styles.title}>Worried About Crazy</p>
-        <p className={styles.title}>Digital Signage</p>
-        <p className={styles.title}>Software Fees?</p>
+        <p className={styles.title}>Worried About Crazy Digital Signage Software Fees?</p>
       </div>
 
       <div className={styles.desc}>

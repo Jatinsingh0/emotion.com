@@ -39,7 +39,7 @@
     border-radius: 10px;
     padding: 20px;
     flex: 1;
-    min-width: 350px;
+    min-width: 200px;
     max-width: 400px;
     cursor: pointer;
   }
@@ -104,3 +104,68 @@
     }
   }
   
+  @media screen and (max-width: 440px) {
+    .container {
+      padding: 50px 1px;
+    }
+    .title {
+      width: 100%;
+      font-weight: 400;
+      font-size: 28px;
+    }
+    .subtitle {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .FirstElement {
+      border-radius: 8px;
+      padding: 15px 10px;
+      flex: 1;
+      min-width: 200px;
+      max-width: 400px;
+      cursor: pointer;
+    }
+    
+    .element {
+      border-radius: 10px;
+      padding: 15px 0px;
+      cursor: pointer;
+    }
+    
+    .iconWrapper {
+      padding: 10px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-align: left; /* Aligns the icon to the left */
+      margin-bottom: 20px;
+    }
+    
+    .icon {
+      width: 100%;
+      height: auto;
+    }
+    
+    .elementTitle {
+      font-size: 16px;
+    }
+    
+    .elementDescription {
+      font-size: 16px;
+      max-width: 410px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+    
+    .imageWrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .image {
+      max-width: 100%;
+      height: auto;
+    }
+  }
