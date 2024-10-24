@@ -6,10 +6,10 @@
   }
   
   .heading {
-    font-size: 34px; /* 3xl equivalent */
+    font-size: 34px;
     font-weight: bold;
-    color: #8a78ea; /* Your desired heading color */
-    margin: 20px 0px 15px; /* Space below heading */
+    color: #8a78ea; 
+    margin: 20px 0px 15px;
     padding: 0px 0px 20px;
     text-align: center;
     word-spacing: 2px;
@@ -36,13 +36,13 @@
   }
   
   .cardContent {
-    padding: 1rem; /* Padding for card content */
+    padding: 1rem; 
   }
   
   .cardTitle {
-    font-size: 18px; /* Title size */
-    font-weight: 600; /* Semi-bold */
-    color: #8a78ea; /* Title color */
+    font-size: 18px; 
+    font-weight: 600;
+    color: #8a78ea; 
     margin: 20px 0px 10px; 
     padding: 0px 10px;
     line-height: 20px;

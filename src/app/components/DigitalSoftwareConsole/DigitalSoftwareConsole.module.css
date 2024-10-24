@@ -1,171 +1,178 @@
 .container {
-    margin-top: 50px;
-    padding: 50px 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px 0px 15px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin: 0px 255px 53px 254.9px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* Ensures wrapping on smaller devices */
+}
+
+.elementsWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.FirstElement {
+  background-color: #691ffc;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 400px;
+  cursor: pointer;
+}
+
+.element {
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px; /* Updated to 200px for smaller screens */
+  max-width: 100%; /* Use max-width 100% for responsiveness */
+  cursor: pointer;
+}
+
+.iconWrapper {
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: left; 
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+}
+
+.elementTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left; 
+}
+
+.elementDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 1024px) {
+  .contentWrapper {
+    flex-direction: column; 
+    gap: 20px; 
   }
-  
+
+  .imageWrapper {
+    margin-top: 20px; 
+    justify-content: center;
+  }
+}
+
+/* Media Query for screens under 440px */
+@media screen and (max-width: 440px) {
+  .container {
+    padding: 50px 10px; 
+  }
+
   .title {
-    font-size: 34px;
-    font-weight: bold;
-    margin: 20px 0px 15px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 28px;
   }
-  
+
   .subtitle {
     font-size: 16px;
-    margin: 0px 255px 53px 254.9px;
-    margin-left: auto;
-    margin-right: auto;
+    line-height: 25px;
+    margin: 0 20px; /* Adjust margin for smaller screens */
   }
-  
-  .contentWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap; /* Ensures wrapping on smaller devices */
-  }
-  
-  .elementsWrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
+
   .FirstElement {
-    background-color: #691ffc;
-    border-radius: 10px;
-    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    padding: 15px 10px;
     flex: 1;
-    min-width: 200px;
-    max-width: 400px;
+    min-width: 100%; /* Ensure elements take up full width */
+    max-width: 100%;
     cursor: pointer;
   }
-  
+
   .element {
     border-radius: 10px;
-    padding: 20px;
-    flex: 1;
-    min-width: 350px;
-    max-width: 400px;
+    padding: 15px 10px; 
+    min-width: 100%; /* Ensure elements take up full width */
+    max-width: 100%; /* Restrict max-width to 100% */
     cursor: pointer;
   }
-  
+
   .iconWrapper {
     padding: 10px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    text-align: left; /* Aligns the icon to the left */
+    text-align: left;
     margin-bottom: 20px;
   }
-  
+
   .icon {
     width: 100%;
     height: auto;
   }
-  
+
   .elementTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left; /* Title aligned left */
+    font-size: 16px;
   }
-  
+
   .elementDescription {
     font-size: 16px;
-    line-height: 1.6;
-    text-align: left; /* Description aligned left */
+    max-width: 100%;
+    font-weight: 400;
+    line-height: 25px;
   }
-  
+
   .imageWrapper {
     flex: 1;
     display: flex;
     justify-content: center;
   }
-  
+
   .image {
     max-width: 100%;
     height: auto;
   }
-  
-  /* Media Query for Small Screens */
-  @media screen and (max-width: 1024px) {
-    .contentWrapper {
-      flex-direction: column; 
-      gap: 20px; 
-    }
-  
-    .imageWrapper {
-      margin-top: 20px; 
-      justify-content: center;
-    }
-  }
-  
-  @media screen and (max-width: 440px) {
-    .container {
-      padding: 50px 1px;
-    }
-    .title {
-      width: 100%;
-      font-weight: 400;
-      font-size: 28px;
-    }
-    .subtitle {
-      font-size: 16px;
-      line-height: 25px;
-    }
-
-    .FirstElement {
-      border-radius: 8px;
-      padding: 15px 10px;
-      flex: 1;
-      min-width: 200px;
-      max-width: 400px;
-      cursor: pointer;
-    }
-    
-    .element {
-      border-radius: 10px;
-      padding: 15px 0px;
-      cursor: pointer;
-    }
-    
-    .iconWrapper {
-      padding: 10px;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      text-align: left; /* Aligns the icon to the left */
-      margin-bottom: 20px;
-    }
-    
-    .icon {
-      width: 100%;
-      height: auto;
-    }
-    
-    .elementTitle {
-      font-size: 16px;
-    }
-    
-    .elementDescription {
-      font-size: 16px;
-      max-width: 410px;
-      font-weight: 400;
-      line-height: 25px;
-    }
-    
-    .imageWrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-    
-    .image {
-      max-width: 100%;
-      height: auto;
-    }
-  }
+}

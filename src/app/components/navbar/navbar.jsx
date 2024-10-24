@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
-import styles from "./navbar.module.css"
-
+import styles from "./navbar.module.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,20 +13,21 @@ const Navbar = () => {
     <div className={styles.wrapper}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <a href="/">Timidlly</a>
+          <a href="/">
+            <img src="/TimidllyLogo.jpg" alt="Timidlly Logo" className={styles.logoImage} />
+          </a>
         </div>
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
           <li><a href="#">Home</a></li>
           <li><a href="#">Pricing</a></li>
-          <li><a href="#" >Downloads</a></li>
+          <li><a href="#">Downloads</a></li>
           <li><a href="#" className={styles.ctaButton}>Register Now</a></li>
         </ul>
         <div className={styles.hamburger} onClick={toggleMenu}>
-            <div className={styles.bar}></div>
-            <div className={styles.bar}></div>
-            <div className={styles.bar}></div>
-          </div>
-          
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
       </nav>
     </div>
   );
