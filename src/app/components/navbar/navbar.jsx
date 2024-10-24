@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import Link from 'next/link'; // Import Link component from next/link
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
@@ -13,15 +14,15 @@ const Navbar = () => {
     <div className={styles.wrapper}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <a href="/">
+          <Link href="/">
             <img src="/TimidllyLogo.jpg" alt="Timidlly Logo" className={styles.logoImage} />
-          </a>
+          </Link>
         </div>
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Downloads</a></li>
-          <li><a href="#" className={styles.ctaButton}>Register Now</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/pages">Pricing</Link></li> {/* Use Link for Next.js routing */}
+          <li><Link href="#">Downloads</Link></li>
+          <li><Link href="#" className={styles.ctaButton}>Register Now</Link></li>
         </ul>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <div className={styles.bar}></div>

@@ -1,0 +1,160 @@
+.combinedSection {
+  padding: 4rem 8rem;
+  background: #1C093A;
+  color: white;
+  border-radius: 15px;
+}
+
+/* Pricing Section */
+.pricingSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subHeading {
+  font-size: 1.2rem;
+  color: #b0b0b5;
+  margin-bottom: 3rem;
+}
+
+.planContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .planContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.planCard {
+  background-color: #22232a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.planCard:hover {
+  transform: scale(1.05);
+}
+
+.popular {
+  background-color: #4c4177;
+}
+
+.planTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.planPrice {
+  font-size: 2rem;
+  color: #f0f0f5;
+  margin-bottom: 1rem;
+}
+
+.planDescription {
+  color: #8f9096;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featuresList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.featureItem {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  color: #d1d1d6;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.featureExplanation {
+  font-size: 0.85rem;
+  color: #8f9096;
+}
+
+.planButton {
+  background-color: #4b39ef;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.planButton:hover {
+  background-color: #3a30c3;
+}
+
+/* FAQ Section */
+.faqSection {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #1C093A;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid #333;
+  padding: 1rem 0;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.plusIcon {
+  font-size: 1.5rem;
+  color: #aaa;
+}
+
+.answer {
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.question:hover {
+  color: #4b39ef;
+}
+
+@media (max-width: 768px) {
+  .combinedSection {
+    padding: 2rem;
+  }
+}
