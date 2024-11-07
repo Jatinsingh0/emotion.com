@@ -1,0 +1,112 @@
+/* login.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #f8f9fa; */
+    height: 80vh;
+    padding: 1rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .logoIcon {
+    background-color: #ea1b22;
+    color: #fff;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .heading {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .subtext {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .formContainer {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #343a40;
+    margin-bottom: 0.2rem;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #f8f9fa;
+  }
+  
+  .inputField::placeholder {
+    color: #adb5bd;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .forgotPassword,
+  .createAccount {
+    color: #ea1b22;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .forgotPassword:hover,
+  .createAccount:hover {
+    text-decoration: underline;
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ea1b22;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #d5171c;
+  }
+  

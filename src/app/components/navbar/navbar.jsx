@@ -22,7 +22,7 @@ const Navbar = () => {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/pages">Pricing</Link></li> {/* Use Link for Next.js routing */}
           <li><Link href="#">Downloads</Link></li>
-          <li><Link href="#" className={styles.ctaButton}>Register Now</Link></li>
+          <li><Link href="/login" className={styles.ctaButton}>Register Now</Link></li>
         </ul>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <div className={styles.bar}></div>
