@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import styles from './login.module.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
+  const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   
@@ -15,11 +15,11 @@ const Login = () => {
     setError(null);
 
     try {
-      // Step 1: Call /track/login with email and password
+      // Step 1: Call /track/login with credential and password
       const loginResponse = await fetch('http://localhost:4000/api/v1/track/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ credential, password }),
       });
       if (!loginResponse.ok) throw new Error('Login failed');
 
@@ -62,12 +62,12 @@ const Login = () => {
       <p className={styles.subtext}>Millions of users are using timidly</p>
 
       <form className={styles.formContainer} onSubmit={handleLogin}>
-        <label htmlFor="email" className={styles.label}>Email or OrderId</label>
+        <label htmlFor="credential" className={styles.label}>credential or OrderId</label>
         <input
           type="text"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          id="credential"
+          value={credential}
+          onChange={(e) => setCredential(e.target.value)}
           placeholder="joe@gmail.com or 1234678"
           className={styles.inputField}
         />

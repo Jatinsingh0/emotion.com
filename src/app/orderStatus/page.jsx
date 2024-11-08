@@ -2,8 +2,7 @@
 import { useRouter } from 'next/router';
 import styles from "./orderStatus.module.css"
 const OrderStatus = () => {
-  const router = useRouter();
-  const { pending, completed, progress } = router.query;
+   const { pending, completed, progress } = router.query;
 
   const pendingOrders = pending ? JSON.parse(pending) : [];
   const completedOrders = completed ? JSON.parse(completed) : [];
@@ -19,7 +18,7 @@ const OrderStatus = () => {
           {pendingOrders.map((order) => (
             <li key={order.id} className={`${styles.orderItem} ${styles.pending}`}>
               Order ID: {order.id}
-            </li>
+            </li> 
           ))}
         </ul>
       </div>
