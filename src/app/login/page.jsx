@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from './login.module.css';
@@ -21,11 +21,19 @@ const Login = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
       });
+      
       if (!loginResponse.ok) throw new Error('Login failed');
+      const loginData = await loginResponse.json();
 
-      // Step 2: Call /track/start after successful login
-      const startResponse = await fetch('http://localhost:4000/api/v1/track/start');
-      if (!startResponse.ok) throw new Error('Failed to initialize orders');
+      // Save the JWT token in localStorage if it exists
+      if (loginData.token) {
+        localStorage.setItem('jwtToken', loginData.token);
+      } else {
+        throw new Error('Token missing in response');
+      }
+
+      // Step 2: Initialize orders
+      await fetchWithAuth('/track/start');
 
       // Step 3: Fetch orders in each stage
       const pendingOrders = await fetchOrders('/track/pending');
@@ -46,11 +54,27 @@ const Login = () => {
     }
   };
 
+  // Helper function to fetch data with JWT token
+  const fetchWithAuth = async (endpoint) => {
+    const token = localStorage.getItem('jwtToken');
+    if (!token) {
+      throw new Error('Authorization token is missing');
+    }
+
+    const response = await fetch(`http://localhost:4000/api/v1${endpoint}`, {
+      headers: { 'Authorization': `Bearer ${token}` },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch from ${endpoint}`);
+    }
+    return response;
+  };
+
   const fetchOrders = async (endpoint) => {
-    const response = await fetch(`http://localhost:4000/api/v1${endpoint}`);
-    if (!response.ok) throw new Error(`Failed to fetch ${endpoint} orders`);
+    const response = await fetchWithAuth(endpoint);
     const data = await response.json();
-    return data.map((order) => order.id);
+    return data.orders.map((order) => order.id); // Assumes each order has an 'id' property
   };
 
   return (
@@ -59,7 +83,7 @@ const Login = () => {
         <span className={styles.logoIcon}>Td</span>
         <h1 className={styles.heading}>Log in</h1>
       </div>
-      <p className={styles.subtext}>Millions of users are using timidly</p>
+      <p className={styles.subtext}>Millions of users are using Timidly</p>
 
       <form className={styles.formContainer} onSubmit={handleLogin}>
         <label htmlFor="email" className={styles.label}>Email or OrderId</label>
