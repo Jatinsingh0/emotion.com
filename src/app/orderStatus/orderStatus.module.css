@@ -1,0 +1,56 @@
+/* OrderStatus.module.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .orderSection {
+    margin-top: 20px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .orderList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .orderItem {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  
+  .pending {
+    background-color: #ffa500; /* Orange for pending */
+  }
+  
+  .completed {
+    background-color: #4caf50; /* Green for completed */
+  }
+  
+  .inProgress {
+    background-color: #1e90ff; /* Blue for in progress */
+  }
+  
