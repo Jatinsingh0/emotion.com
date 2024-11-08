@@ -1,8 +1,10 @@
-"use client"
-import { useRouter } from 'next/router';
-import styles from "./orderStatus.module.css"
+"use client";
+import { useEffect, useState } from 'react';
+import styles from './orderStatus.module.css';
+
 const OrderStatus = () => {
-   const { pending, completed, progress } = router.query;
+  const router = useRouter();
+  const { pending, completed, progress } = router.query;
 
   const pendingOrders = pending ? JSON.parse(pending) : [];
   const completedOrders = completed ? JSON.parse(completed) : [];
@@ -18,7 +20,7 @@ const OrderStatus = () => {
           {pendingOrders.map((order) => (
             <li key={order.id} className={`${styles.orderItem} ${styles.pending}`}>
               Order ID: {order.id}
-            </li> 
+            </li>
           ))}
         </ul>
       </div>
@@ -26,9 +28,9 @@ const OrderStatus = () => {
       <div className={styles.orderSection}>
         <h2 className={styles.sectionTitle}>Completed Orders</h2>
         <ul className={styles.orderList}>
-          {completedOrders.map((order) => (
-            <li key={order.id} className={`${styles.orderItem} ${styles.completed}`}>
-              Order ID: {order.id}
+          {completedOrders.map((id) => (
+            <li key={id} className={`${styles.orderItem} ${styles.completed}`}>
+              Order ID: {id}
             </li>
           ))}
         </ul>
@@ -37,9 +39,9 @@ const OrderStatus = () => {
       <div className={styles.orderSection}>
         <h2 className={styles.sectionTitle}>In Progress Orders</h2>
         <ul className={styles.orderList}>
-          {progressOrders.map((order) => (
-            <li key={order.id} className={`${styles.orderItem} ${styles.inProgress}`}>
-              Order ID: {order.id}
+          {progressOrders.map((id) => (
+            <li key={id} className={`${styles.orderItem} ${styles.inProgress}`}>
+              Order ID: {id}
             </li>
           ))}
         </ul>
